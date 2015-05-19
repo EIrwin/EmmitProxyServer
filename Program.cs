@@ -11,7 +11,7 @@ namespace EmmitProxyServer
         {
             //-path: overrides the path that Emmit is listenign on
 
-            string emmitPath = "http://localhost:8888/emmit";
+            string emmitPath = "http://localhost:8888";
             WebApp.Start(emmitPath, (app) =>
             {
                 var startup = new EmmitStartup();
