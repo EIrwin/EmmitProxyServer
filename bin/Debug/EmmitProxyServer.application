@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="EmmitProxyServer.exe.manifest" size="12337">
+    <dependentAssembly dependencyType="install" codebase="EmmitProxyServer.exe.manifest" size="13013">
       <assemblyIdentity name="EmmitProxyServer.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WIr2OG/EKvhOiiGE1SJpbupa+Op05y3Q784eMeMoMAY=</dsig:DigestValue>
+        <dsig:DigestValue>I6CKtNGRxkDfjIw8+3dPAxVcLNPKj7VB6S6p1LGSIII=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

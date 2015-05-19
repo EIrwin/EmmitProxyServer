@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
+using CommandLine;
+using EmmitProxyServer.Properties;
 using Microsoft.Owin.Hosting;
 using Nancy.Hosting.Self;
 
@@ -9,29 +12,22 @@ namespace EmmitProxyServer
     {
         public static void Main(string[] args)
         {
-            //-path: overrides the path that Emmit is listenign on
-
-            string emmitPath = "http://localhost:8888";
-            WebApp.Start(emmitPath, (app) =>
+            WebApp.Start(Settings.Default.EmmitPath, (app) =>
             {
                 var startup = new EmmitStartup();
                 startup.Configuration(app);
 
-                Console.WriteLine("Emmit server started on :{0}", emmitPath);
+                Console.WriteLine("Emmit server started on :{0}",Settings.Default.EmmitPath);
             });
 
+            Bootstrapepr bootstrapper = new Bootstrapepr();
+            
+            var host = new NancyHost(bootstrapper, new Uri(Settings.Default.NancyPath));
+            host.Start();
 
-            string nancyPath = "http://localhost:8787";
-            using (NancyHost host = new NancyHost(new HostConfiguration { UrlReservations = new UrlReservations { CreateAutomatically = true }},new Uri(nancyPath)))
-            {
-                host.Start();
+            Console.WriteLine("Nancy server started on :{0}", Settings.Default.NancyPath);
 
-                Console.WriteLine("Your application is running on " + nancyPath);
-            }
-
-
-            Console.ReadLine();
-
+            Thread.Sleep(Timeout.Infinite);
         }
     }
 }

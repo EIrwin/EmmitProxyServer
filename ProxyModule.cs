@@ -1,5 +1,6 @@
 ﻿using Emmit;
 using Nancy;
+using Nancy.ModelBinding;
 
 namespace EmmitProxyServer
 {
@@ -9,10 +10,16 @@ namespace EmmitProxyServer
         {
             Post["/", true] = async (context, cancel) =>
                 {
+                    var model = this.Bind<ProxyModel>();
                     IEmitterFactory factory = new EmitterFactory();
                     IProxyEmitter emitter = factory.Create((ctx) => new ProxyEmitter(ctx));
-                    emitter.OnSendData(context.data);
+                    emitter.OnSendData(model.Data);
 
+                    return Response.AsJson(true);
+                };
+
+            Get["/", true] = async (context, cancel) =>
+                {
                     return Response.AsJson(true);
                 };
 

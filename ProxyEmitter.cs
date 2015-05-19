@@ -6,6 +6,10 @@ namespace EmmitProxyServer
 {
     public class ProxyEmitter:Emitter,IProxyEmitter
     {
+        public ProxyEmitter():base((IEmitterContext) null)
+        {
+            
+        }
         public ProxyEmitter(IEmitterContext emitterContext) : base(emitterContext)
         {
         }
@@ -21,6 +25,11 @@ namespace EmmitProxyServer
         public void OnSendData(object data)
         {
             EmitterContext.Clients.All.onReceiveData(data);
+        }
+
+        public void OnSendData(string methodName, object data)
+        {
+            Emit(methodName, data);
         }
 
         public override System.Threading.Tasks.Task OnConnected()

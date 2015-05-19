@@ -31,3 +31,5 @@ C:\Users\eirwin\Source\Repos\EmmitProxyServer\bin\Debug\EmmitProxyServer.exe.man
 C:\Users\eirwin\Source\Repos\EmmitProxyServer\bin\Debug\EmmitProxyServer.application
 C:\Users\eirwin\Source\Repos\EmmitProxyServer\obj\Debug\EmmitProxyServer.exe.manifest
 C:\Users\eirwin\Source\Repos\EmmitProxyServer\obj\Debug\EmmitProxyServer.application
+C:\Users\eirwin\Source\Repos\EmmitProxyServer\bin\Debug\CommandLine.dll
+C:\Users\eirwin\Source\Repos\EmmitProxyServer\bin\Debug\CommandLine.xml
