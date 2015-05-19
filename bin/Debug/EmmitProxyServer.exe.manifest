@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EmmitProxyServer.exe" size="11776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EmmitProxyServer.exe" size="12800">
       <assemblyIdentity name="EmmitProxyServer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jVszsD9wn2K5eDSjXQBzMu3FdUaWbkJSQ5E+vqYbRNU=</dsig:DigestValue>
+        <dsig:DigestValue>Y4tzKqy8dt3fd4GOzjWoCkC9farMp9FSFbHAzHrWbyU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

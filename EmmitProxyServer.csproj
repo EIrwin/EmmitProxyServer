@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapepr.cs" />
+    <Compile Include="DynamicProxyModel.cs" />
     <Compile Include="EmmitStartup.cs" />
     <Compile Include="IProxyEmitter.cs" />
     <Compile Include="Program.cs" />
