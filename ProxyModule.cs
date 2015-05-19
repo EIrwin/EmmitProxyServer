@@ -1,4 +1,5 @@
 ﻿using Emmit;
+using Microsoft.AspNet.SignalR;
 using Nancy;
 using Nancy.ModelBinding;
 
@@ -24,6 +25,7 @@ namespace EmmitProxyServer
                     IEmitterFactory factory = new EmitterFactory();
                     IProxyEmitter emitter = factory.Create((ctx) => new ProxyEmitter(ctx));
                     emitter.OnSendData(model.Method,model.Data);
+                    
 
                     return Response.AsJson(true);
                 };
